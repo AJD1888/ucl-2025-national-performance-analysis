@@ -36,3 +36,31 @@ Firstly, some basic statistics relating to volume were looked at. From the data 
 - Forwards : conversion rate (%), goals per 90, assists per 90
 
 Note that these statistics can overlap in some positions. For example, a defender could be in the top 10 assists per 90. 
+
+## Conclusions 
+
+From the visualisation provided, we can see we have some considerations to look at in our analysis. More players from countries outside the top five ranked countries on coefficient played more matches and minutes in the Uefa Champions League. However, this is why the analysis is position specific and only looks at the top 10 players in each of the metrics mentioned, to give a better sense of where the highest peforming players come from. Here were some key findings: 
+
+- Attacking Efficiency : Of the top ten players with the highest goals/90 , eight of them came from a country ranked outwith the top 5 national associations. This was the same ratio for assists/90.
+- Goalkeeping reliability : Of the top ten goalkeepers with the highest clean sheets/90, six of them came from outside a top five national association.
+- Defensive solidity : Of the top ten players with the highest tackles won (%), the split by top five national associations and other countries was 50/50. 
+
+Core Analytical Takeways: 
+
+1. Volume vs Efficiency: 
+While players from the top five national associations provided high total volume (in our case combined G/A) due to club depth and quality of squad, normalising statistics to per-90 rates reveals that elite efficiency is heavily decentralised across global nations. 
+2. Best Leagues doesen't mean best players come from that nation
+Top quality individual output in the Champions League is not exclusive to traditional powerhouse nations. Players from "other" nations (who potentially play in these leagues) match or exceed players from the top five uefa nations based on coefficient, particularly in the attacking areas of the pitch. 
+
+## Project Limitations 
+
+Several limitations should be considered when interpreting the results: 
+
+- Limited sampe size : The dataset used only covers the first 4 matchdays of the 2024/25 season, representing a relatively small sample size of matches and total minutes played. A fairer representation would have been the 8 matches from the league phase of the competition or including later knockout rounds.
+- Early Season Variance : Metrics calculated are suspect to short-term variance, player form spikes and disparities in fixture difficulty.
+- Contextual Variables excluded : Per-90 efficiency metrics do not account for external tactical variables such as team playing style, domestic league fatigue, or individual role responsibilites within specific tactical plans. 
+
+## Dataset 
+https://www.kaggle.com/datasets/pabloramoswilkins/ucl-2025-players-data
+
+

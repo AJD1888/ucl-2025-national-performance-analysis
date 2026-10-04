@@ -1,0 +1,2915 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0912.1023                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='7c245a4d7492be507fe686480b43dd73b11b57dbc29976f6958a4899a22a4dac' _.fcp.WorkbookFingerprinting.true...creator-author-id='7c245a4d7492be507fe686480b43dd73b11b57dbc29976f6958a4899a22a4dac' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='7c245a4d7492be507fe686480b43dd73b11b57dbc29976f6958a4899a22a4dac' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='7c245a4d7492be507fe686480b43dd73b11b57dbc29976f6958a4899a22a4dac' original-version='18.1' source-build='2026.2.3 (20262.26.0912.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cleaned_players_data+' inline='true' name='federated.1ohfms713qkz2e15t67o71970z63' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleaned_players_data' name='textscan.1h6vn0k0pdgzf310725yx1dijxk0'>
+            <connection class='textscan' directory='C:/Users/aidan/OneDrive/ucl-2025-national-performance-analysis' filename='cleaned_players_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='cleaned_players_data.csv' table='[cleaned_players_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='integer' name='id_player' ordinal='0' />
+              <column datatype='string' name='player_name' ordinal='1' />
+              <column datatype='string' name='nationality' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='integer' name='age' ordinal='4' />
+              <column datatype='integer' name='team_id' ordinal='5' />
+              <column datatype='string' name='Country_tier' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='cleaned_key_stats_data.csv' table='[cleaned_key_stats_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='integer' name='id_player' ordinal='0' />
+              <column datatype='real' name='distance_covered(km/h)' ordinal='1' />
+              <column datatype='real' name='top_speed' ordinal='2' />
+              <column datatype='real' name='minutes_played' ordinal='3' />
+              <column datatype='real' name='appearances' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_assists_per_90.csv' table='[top_10_assists_per_90#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='player_name' ordinal='0' />
+              <column datatype='string' name='nationality' ordinal='1' />
+              <column datatype='string' name='team' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='real' name='Assists per 90 minutes' ordinal='4' />
+              <column datatype='string' name='Country_tier' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_clean_sheets_per_90.csv' table='[top_10_clean_sheets_per_90#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='player_name' ordinal='0' />
+              <column datatype='string' name='nationality' ordinal='1' />
+              <column datatype='string' name='team' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='real' name='Clean Sheets per 90 minutes' ordinal='4' />
+              <column datatype='string' name='Country_tier' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_conversion_rate.csv' table='[top_10_conversion_rate#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='player_name' ordinal='0' />
+              <column datatype='string' name='nationality' ordinal='1' />
+              <column datatype='string' name='team' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='real' name='goals' ordinal='4' />
+              <column datatype='real' name='total_attempts' ordinal='5' />
+              <column datatype='real' name='Conversion Rate (%)' ordinal='6' />
+              <column datatype='string' name='Country_tier' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_goals_per_90.csv' table='[top_10_goals_per_90#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='player_name' ordinal='0' />
+              <column datatype='string' name='nationality' ordinal='1' />
+              <column datatype='string' name='team' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='real' name='Goals per 90 minutes' ordinal='4' />
+              <column datatype='string' name='Country_tier' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_pass_completion_rate.csv' table='[top_10_pass_completion_rate#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='player_name' ordinal='0' />
+              <column datatype='string' name='nationality' ordinal='1' />
+              <column datatype='string' name='team' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='real' name='passes_completed' ordinal='4' />
+              <column datatype='real' name='passes_attempted' ordinal='5' />
+              <column datatype='real' name='Pass Completion Rate (%)' ordinal='6' />
+              <column datatype='string' name='Country_tier' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_tackles_won.csv' table='[top_10_tackles_won#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='player_name' ordinal='0' />
+              <column datatype='string' name='nationality' ordinal='1' />
+              <column datatype='string' name='team' ordinal='2' />
+              <column datatype='string' name='field_position' ordinal='3' />
+              <column datatype='real' name='Tackles Won (%)' ordinal='4' />
+              <column datatype='string' name='Country_tier' ordinal='5' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Assists per 90 minutes]' value='[top_10_assists_per_90.csv].[Assists per 90 minutes]' />
+          <map key='[Clean Sheets per 90 minutes]' value='[top_10_clean_sheets_per_90.csv].[Clean Sheets per 90 minutes]' />
+          <map key='[Conversion Rate (%)]' value='[top_10_conversion_rate.csv].[Conversion Rate (%)]' />
+          <map key='[Country_tier (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv].[Country_tier]' />
+          <map key='[Country_tier (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv].[Country_tier]' />
+          <map key='[Country_tier (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv].[Country_tier]' />
+          <map key='[Country_tier (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv].[Country_tier]' />
+          <map key='[Country_tier (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv].[Country_tier]' />
+          <map key='[Country_tier (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv].[Country_tier]' />
+          <map key='[Country_tier]' value='[cleaned_players_data.csv].[Country_tier]' />
+          <map key='[Goals per 90 minutes]' value='[top_10_goals_per_90.csv].[Goals per 90 minutes]' />
+          <map key='[Pass Completion Rate (%)]' value='[top_10_pass_completion_rate.csv].[Pass Completion Rate (%)]' />
+          <map key='[Tackles Won (%)]' value='[top_10_tackles_won.csv].[Tackles Won (%)]' />
+          <map key='[age]' value='[cleaned_players_data.csv].[age]' />
+          <map key='[appearances]' value='[cleaned_key_stats_data.csv].[appearances]' />
+          <map key='[distance_covered(km/h)]' value='[cleaned_key_stats_data.csv].[distance_covered(km/h)]' />
+          <map key='[field_position (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv].[field_position]' />
+          <map key='[field_position (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv].[field_position]' />
+          <map key='[field_position (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv].[field_position]' />
+          <map key='[field_position (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv].[field_position]' />
+          <map key='[field_position (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv].[field_position]' />
+          <map key='[field_position (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv].[field_position]' />
+          <map key='[field_position]' value='[cleaned_players_data.csv].[field_position]' />
+          <map key='[goals]' value='[top_10_conversion_rate.csv].[goals]' />
+          <map key='[id_player (cleaned_key_stats_data.csv)]' value='[cleaned_key_stats_data.csv].[id_player]' />
+          <map key='[id_player]' value='[cleaned_players_data.csv].[id_player]' />
+          <map key='[minutes_played]' value='[cleaned_key_stats_data.csv].[minutes_played]' />
+          <map key='[nationality (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv].[nationality]' />
+          <map key='[nationality (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv].[nationality]' />
+          <map key='[nationality (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv].[nationality]' />
+          <map key='[nationality (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv].[nationality]' />
+          <map key='[nationality (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv].[nationality]' />
+          <map key='[nationality (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv].[nationality]' />
+          <map key='[nationality]' value='[cleaned_players_data.csv].[nationality]' />
+          <map key='[passes_attempted]' value='[top_10_pass_completion_rate.csv].[passes_attempted]' />
+          <map key='[passes_completed]' value='[top_10_pass_completion_rate.csv].[passes_completed]' />
+          <map key='[player_name (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv].[player_name]' />
+          <map key='[player_name (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv].[player_name]' />
+          <map key='[player_name (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv].[player_name]' />
+          <map key='[player_name (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv].[player_name]' />
+          <map key='[player_name (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv].[player_name]' />
+          <map key='[player_name (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv].[player_name]' />
+          <map key='[player_name]' value='[cleaned_players_data.csv].[player_name]' />
+          <map key='[team (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv].[team]' />
+          <map key='[team (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv].[team]' />
+          <map key='[team (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv].[team]' />
+          <map key='[team (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv].[team]' />
+          <map key='[team (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv].[team]' />
+          <map key='[team]' value='[top_10_conversion_rate.csv].[team]' />
+          <map key='[team_id]' value='[cleaned_players_data.csv].[team_id]' />
+          <map key='[top_speed]' value='[cleaned_key_stats_data.csv].[top_speed]' />
+          <map key='[total_attempts]' value='[top_10_conversion_rate.csv].[total_attempts]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_key_stats_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_player</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_player]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>id_player</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[team_id]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>team_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier]</local-name>
+            <parent-name>[cleaned_players_data.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_player</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_player (cleaned_key_stats_data.csv)]</local-name>
+            <parent-name>[cleaned_key_stats_data.csv]</parent-name>
+            <remote-alias>id_player</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distance_covered(km/h)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[distance_covered(km/h)]</local-name>
+            <parent-name>[cleaned_key_stats_data.csv]</parent-name>
+            <remote-alias>distance_covered(km/h)</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>top_speed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[top_speed]</local-name>
+            <parent-name>[cleaned_key_stats_data.csv]</parent-name>
+            <remote-alias>top_speed</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minutes_played</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[minutes_played]</local-name>
+            <parent-name>[cleaned_key_stats_data.csv]</parent-name>
+            <remote-alias>minutes_played</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appearances</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[appearances]</local-name>
+            <parent-name>[cleaned_key_stats_data.csv]</parent-name>
+            <remote-alias>appearances</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name (top_10_assists_per_90.csv)]</local-name>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality (top_10_assists_per_90.csv)]</local-name>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team (top_10_assists_per_90.csv)]</local-name>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position (top_10_assists_per_90.csv)]</local-name>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assists per 90 minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Assists per 90 minutes]</local-name>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias>Assists per 90 minutes</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier (top_10_assists_per_90.csv)]</local-name>
+            <parent-name>[top_10_assists_per_90.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name (top_10_clean_sheets_per_90.csv)]</local-name>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality (top_10_clean_sheets_per_90.csv)]</local-name>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team (top_10_clean_sheets_per_90.csv)]</local-name>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position (top_10_clean_sheets_per_90.csv)]</local-name>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Clean Sheets per 90 minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Clean Sheets per 90 minutes]</local-name>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias>Clean Sheets per 90 minutes</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier (top_10_clean_sheets_per_90.csv)]</local-name>
+            <parent-name>[top_10_clean_sheets_per_90.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name (top_10_conversion_rate.csv)]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality (top_10_conversion_rate.csv)]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position (top_10_conversion_rate.csv)]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>goals</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[goals]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>goals</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_attempts</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_attempts]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>total_attempts</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Conversion Rate (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Conversion Rate (%)]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>Conversion Rate (%)</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier (top_10_conversion_rate.csv)]</local-name>
+            <parent-name>[top_10_conversion_rate.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name (top_10_goals_per_90.csv)]</local-name>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality (top_10_goals_per_90.csv)]</local-name>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team (top_10_goals_per_90.csv)]</local-name>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position (top_10_goals_per_90.csv)]</local-name>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Goals per 90 minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Goals per 90 minutes]</local-name>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias>Goals per 90 minutes</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier (top_10_goals_per_90.csv)]</local-name>
+            <parent-name>[top_10_goals_per_90.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name (top_10_pass_completion_rate.csv)]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality (top_10_pass_completion_rate.csv)]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team (top_10_pass_completion_rate.csv)]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position (top_10_pass_completion_rate.csv)]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passes_completed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[passes_completed]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>passes_completed</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>passes_attempted</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[passes_attempted]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>passes_attempted</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pass Completion Rate (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Pass Completion Rate (%)]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>Pass Completion Rate (%)</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier (top_10_pass_completion_rate.csv)]</local-name>
+            <parent-name>[top_10_pass_completion_rate.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>player_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[player_name (top_10_tackles_won.csv)]</local-name>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias>player_name</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nationality</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nationality (top_10_tackles_won.csv)]</local-name>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias>nationality</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>team</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[team (top_10_tackles_won.csv)]</local-name>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias>team</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[field_position (top_10_tackles_won.csv)]</local-name>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias>field_position</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tackles Won (%)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Tackles Won (%)]</local-name>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias>Tackles Won (%)</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country_tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country_tier (top_10_tackles_won.csv)]</local-name>
+            <parent-name>[top_10_tackles_won.csv]</parent-name>
+            <remote-alias>Country_tier</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Assists per 90 minutes]' role='measure' type='quantitative' />
+      <column datatype='real' default-format='p0.00%' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([minutes_played]) / TOTAL(SUM([minutes_played]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Clean Sheets per 90 minutes]' role='measure' type='quantitative' />
+      <column caption='Country tier (top 10 assists per 90.csv)' datatype='string' name='[Country_tier (top_10_assists_per_90.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country tier (top 10 clean sheets per 90.csv)' datatype='string' name='[Country_tier (top_10_clean_sheets_per_90.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country tier (top 10 conversion rate.csv)' datatype='string' name='[Country_tier (top_10_conversion_rate.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country tier (top 10 goals per 90.csv)' datatype='string' name='[Country_tier (top_10_goals_per_90.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country tier (top 10 pass completion rate.csv)' datatype='string' name='[Country_tier (top_10_pass_completion_rate.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country tier (top 10 tackles won.csv)' datatype='string' name='[Country_tier (top_10_tackles_won.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[Country_tier]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Goals per 90 minutes]' role='measure' type='quantitative' />
+      <column caption='cleaned_key_stats_data.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]' role='measure' type='quantitative' />
+      <column caption='cleaned_players_data.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]' role='measure' type='quantitative' />
+      <column caption='top_10_assists_per_90.csv' datatype='table' name='[__tableau_internal_object_id__].[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]' role='measure' type='quantitative' />
+      <column caption='top_10_clean_sheets_per_90.csv' datatype='table' name='[__tableau_internal_object_id__].[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]' role='measure' type='quantitative' />
+      <column caption='top_10_conversion_rate.csv' datatype='table' name='[__tableau_internal_object_id__].[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]' role='measure' type='quantitative' />
+      <column caption='top_10_goals_per_90.csv' datatype='table' name='[__tableau_internal_object_id__].[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]' role='measure' type='quantitative' />
+      <column caption='top_10_pass_completion_rate.csv' datatype='table' name='[__tableau_internal_object_id__].[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]' role='measure' type='quantitative' />
+      <column caption='top_10_tackles_won.csv' datatype='table' name='[__tableau_internal_object_id__].[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]' role='measure' type='quantitative' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Appearances' datatype='real' name='[appearances]' role='measure' type='quantitative' />
+      <column caption='Distance Covered(Km/H)' datatype='real' name='[distance_covered(km/h)]' role='measure' type='quantitative' />
+      <column caption='Field Position (Top 10 Assists Per 90.Csv)' datatype='string' name='[field_position (top_10_assists_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Field Position (Top 10 Clean Sheets Per 90.Csv)' datatype='string' name='[field_position (top_10_clean_sheets_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Field Position (Top 10 Conversion Rate.Csv)' datatype='string' name='[field_position (top_10_conversion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Field Position (Top 10 Goals Per 90.Csv)' datatype='string' name='[field_position (top_10_goals_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Field Position (Top 10 Pass Completion Rate.Csv)' datatype='string' name='[field_position (top_10_pass_completion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Field Position (Top 10 Tackles Won.Csv)' datatype='string' name='[field_position (top_10_tackles_won.csv)]' role='dimension' type='nominal' />
+      <column caption='Field Position' datatype='string' name='[field_position]' role='dimension' type='nominal' />
+      <column caption='Goals' datatype='real' name='[goals]' role='measure' type='quantitative' />
+      <column caption='Id Player (Cleaned Key Stats Data.Csv)' datatype='integer' name='[id_player (cleaned_key_stats_data.csv)]' role='dimension' type='ordinal' />
+      <column caption='Id Player' datatype='integer' name='[id_player]' role='dimension' type='ordinal' />
+      <column caption='Minutes Played' datatype='real' name='[minutes_played]' role='measure' type='quantitative' />
+      <column caption='Nationality (Top 10 Assists Per 90.Csv)' datatype='string' name='[nationality (top_10_assists_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Nationality (Top 10 Clean Sheets Per 90.Csv)' datatype='string' name='[nationality (top_10_clean_sheets_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Nationality (Top 10 Conversion Rate.Csv)' datatype='string' name='[nationality (top_10_conversion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Nationality (Top 10 Goals Per 90.Csv)' datatype='string' name='[nationality (top_10_goals_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Nationality (Top 10 Pass Completion Rate.Csv)' datatype='string' name='[nationality (top_10_pass_completion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Nationality (Top 10 Tackles Won.Csv)' datatype='string' name='[nationality (top_10_tackles_won.csv)]' role='dimension' type='nominal' />
+      <column caption='Nationality' datatype='string' name='[nationality]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='Passes Attempted' datatype='real' name='[passes_attempted]' role='measure' type='quantitative' />
+      <column caption='Passes Completed' datatype='real' name='[passes_completed]' role='measure' type='quantitative' />
+      <column caption='Player Name (Top 10 Assists Per 90.Csv)' datatype='string' name='[player_name (top_10_assists_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Player Name (Top 10 Clean Sheets Per 90.Csv)' datatype='string' name='[player_name (top_10_clean_sheets_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Player Name (Top 10 Conversion Rate.Csv)' datatype='string' name='[player_name (top_10_conversion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Player Name (Top 10 Goals Per 90.Csv)' datatype='string' name='[player_name (top_10_goals_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Player Name (Top 10 Pass Completion Rate.Csv)' datatype='string' name='[player_name (top_10_pass_completion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Player Name (Top 10 Tackles Won.Csv)' datatype='string' name='[player_name (top_10_tackles_won.csv)]' role='dimension' type='nominal' />
+      <column caption='Player Name' datatype='string' name='[player_name]' role='dimension' type='nominal' />
+      <column caption='Team (Top 10 Assists Per 90.Csv)' datatype='string' name='[team (top_10_assists_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Team (Top 10 Clean Sheets Per 90.Csv)' datatype='string' name='[team (top_10_clean_sheets_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Team (Top 10 Goals Per 90.Csv)' datatype='string' name='[team (top_10_goals_per_90.csv)]' role='dimension' type='nominal' />
+      <column caption='Team (Top 10 Pass Completion Rate.Csv)' datatype='string' name='[team (top_10_pass_completion_rate.csv)]' role='dimension' type='nominal' />
+      <column caption='Team (Top 10 Tackles Won.Csv)' datatype='string' name='[team (top_10_tackles_won.csv)]' role='dimension' type='nominal' />
+      <column caption='Team' datatype='string' name='[team]' role='dimension' type='nominal' />
+      <column caption='Team Id' datatype='integer' name='[team_id]' role='dimension' type='ordinal' />
+      <column caption='Top Speed' datatype='real' name='[top_speed]' role='measure' type='quantitative' />
+      <column caption='Total Attempts' datatype='real' name='[total_attempts]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='C:/Users/aidan/AppData/Local/Temp/TableauTemp/#TableauTemp_0i6cdbv1gclodt1dssyis0nmw1ca.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/04/2026 04:19:13 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' table='[Extract].[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]' type='table' />
+            <relation name='cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5' table='[Extract].[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]' type='table' />
+            <relation name='top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4' table='[Extract].[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]' type='table' />
+            <relation name='top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C' table='[Extract].[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]' type='table' />
+            <relation name='top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15' table='[Extract].[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]' type='table' />
+            <relation name='top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1' table='[Extract].[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]' type='table' />
+            <relation name='top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2' table='[Extract].[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]' type='table' />
+            <relation name='top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB' table='[Extract].[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Assists per 90 minutes]' value='[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4].[Assists per 90 minutes]' />
+            <map key='[Clean Sheets per 90 minutes]' value='[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C].[Clean Sheets per 90 minutes]' />
+            <map key='[Conversion Rate (%)]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[Conversion Rate (%)]' />
+            <map key='[Country_tier (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4].[Country_tier]' />
+            <map key='[Country_tier (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C].[Country_tier]' />
+            <map key='[Country_tier (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[Country_tier]' />
+            <map key='[Country_tier (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1].[Country_tier]' />
+            <map key='[Country_tier (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[Country_tier]' />
+            <map key='[Country_tier (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB].[Country_tier]' />
+            <map key='[Country_tier]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[Country_tier]' />
+            <map key='[Goals per 90 minutes]' value='[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1].[Goals per 90 minutes]' />
+            <map key='[Pass Completion Rate (%)]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[Pass Completion Rate (%)]' />
+            <map key='[Tackles Won (%)]' value='[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB].[Tackles Won (%)]' />
+            <map key='[age]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[age]' />
+            <map key='[appearances]' value='[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5].[appearances]' />
+            <map key='[distance_covered(km/h)]' value='[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5].[distance_covered(km/h)]' />
+            <map key='[field_position (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4].[field_position]' />
+            <map key='[field_position (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C].[field_position]' />
+            <map key='[field_position (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[field_position]' />
+            <map key='[field_position (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1].[field_position]' />
+            <map key='[field_position (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[field_position]' />
+            <map key='[field_position (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB].[field_position]' />
+            <map key='[field_position]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[field_position]' />
+            <map key='[goals]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[goals]' />
+            <map key='[id_player (cleaned_key_stats_data.csv)]' value='[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5].[id_player]' />
+            <map key='[id_player]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[id_player]' />
+            <map key='[minutes_played]' value='[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5].[minutes_played]' />
+            <map key='[nationality (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4].[nationality]' />
+            <map key='[nationality (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C].[nationality]' />
+            <map key='[nationality (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[nationality]' />
+            <map key='[nationality (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1].[nationality]' />
+            <map key='[nationality (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[nationality]' />
+            <map key='[nationality (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB].[nationality]' />
+            <map key='[nationality]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[nationality]' />
+            <map key='[passes_attempted]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[passes_attempted]' />
+            <map key='[passes_completed]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[passes_completed]' />
+            <map key='[player_name (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4].[player_name]' />
+            <map key='[player_name (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C].[player_name]' />
+            <map key='[player_name (top_10_conversion_rate.csv)]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[player_name]' />
+            <map key='[player_name (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1].[player_name]' />
+            <map key='[player_name (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[player_name]' />
+            <map key='[player_name (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB].[player_name]' />
+            <map key='[player_name]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[player_name]' />
+            <map key='[team (top_10_assists_per_90.csv)]' value='[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4].[team]' />
+            <map key='[team (top_10_clean_sheets_per_90.csv)]' value='[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C].[team]' />
+            <map key='[team (top_10_goals_per_90.csv)]' value='[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1].[team]' />
+            <map key='[team (top_10_pass_completion_rate.csv)]' value='[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2].[team]' />
+            <map key='[team (top_10_tackles_won.csv)]' value='[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB].[team]' />
+            <map key='[team]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[team]' />
+            <map key='[team_id]' value='[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799].[team_id]' />
+            <map key='[top_speed]' value='[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5].[top_speed]' />
+            <map key='[total_attempts]' value='[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15].[total_attempts]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id_player</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id_player]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>id_player</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>908</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>908</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[team_id]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>team_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier]</local-name>
+              <parent-name>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleaned_players_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id_player</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id_player (cleaned_key_stats_data.csv)]</local-name>
+              <parent-name>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</parent-name>
+              <remote-alias>id_player</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleaned_key_stats_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>908</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>distance_covered(km/h)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[distance_covered(km/h)]</local-name>
+              <parent-name>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</parent-name>
+              <remote-alias>distance_covered(km/h)</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleaned_key_stats_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>666</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>top_speed</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[top_speed]</local-name>
+              <parent-name>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</parent-name>
+              <remote-alias>top_speed</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleaned_key_stats_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>481</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>minutes_played</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[minutes_played]</local-name>
+              <parent-name>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</parent-name>
+              <remote-alias>minutes_played</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleaned_key_stats_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>280</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>appearances</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[appearances]</local-name>
+              <parent-name>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</parent-name>
+              <remote-alias>appearances</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleaned_key_stats_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name (top_10_assists_per_90.csv)]</local-name>
+              <parent-name>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>12</ordinal>
+              <family>top_10_assists_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality (top_10_assists_per_90.csv)]</local-name>
+              <parent-name>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>13</ordinal>
+              <family>top_10_assists_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team (top_10_assists_per_90.csv)]</local-name>
+              <parent-name>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>14</ordinal>
+              <family>top_10_assists_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position (top_10_assists_per_90.csv)]</local-name>
+              <parent-name>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>15</ordinal>
+              <family>top_10_assists_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Assists per 90 minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Assists per 90 minutes]</local-name>
+              <parent-name>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</parent-name>
+              <remote-alias>Assists per 90 minutes</remote-alias>
+              <ordinal>16</ordinal>
+              <family>top_10_assists_per_90.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier (top_10_assists_per_90.csv)]</local-name>
+              <parent-name>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>17</ordinal>
+              <family>top_10_assists_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name (top_10_clean_sheets_per_90.csv)]</local-name>
+              <parent-name>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>18</ordinal>
+              <family>top_10_clean_sheets_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality (top_10_clean_sheets_per_90.csv)]</local-name>
+              <parent-name>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>19</ordinal>
+              <family>top_10_clean_sheets_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team (top_10_clean_sheets_per_90.csv)]</local-name>
+              <parent-name>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>20</ordinal>
+              <family>top_10_clean_sheets_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position (top_10_clean_sheets_per_90.csv)]</local-name>
+              <parent-name>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>21</ordinal>
+              <family>top_10_clean_sheets_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Clean Sheets per 90 minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Clean Sheets per 90 minutes]</local-name>
+              <parent-name>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</parent-name>
+              <remote-alias>Clean Sheets per 90 minutes</remote-alias>
+              <ordinal>22</ordinal>
+              <family>top_10_clean_sheets_per_90.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier (top_10_clean_sheets_per_90.csv)]</local-name>
+              <parent-name>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>23</ordinal>
+              <family>top_10_clean_sheets_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name (top_10_conversion_rate.csv)]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>24</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality (top_10_conversion_rate.csv)]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>25</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>26</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position (top_10_conversion_rate.csv)]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>27</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>goals</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[goals]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>goals</remote-alias>
+              <ordinal>28</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_attempts</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_attempts]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>total_attempts</remote-alias>
+              <ordinal>29</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Conversion Rate (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Conversion Rate (%)]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>Conversion Rate (%)</remote-alias>
+              <ordinal>30</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier (top_10_conversion_rate.csv)]</local-name>
+              <parent-name>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>31</ordinal>
+              <family>top_10_conversion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name (top_10_goals_per_90.csv)]</local-name>
+              <parent-name>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>32</ordinal>
+              <family>top_10_goals_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality (top_10_goals_per_90.csv)]</local-name>
+              <parent-name>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>33</ordinal>
+              <family>top_10_goals_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team (top_10_goals_per_90.csv)]</local-name>
+              <parent-name>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>34</ordinal>
+              <family>top_10_goals_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position (top_10_goals_per_90.csv)]</local-name>
+              <parent-name>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>35</ordinal>
+              <family>top_10_goals_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Goals per 90 minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Goals per 90 minutes]</local-name>
+              <parent-name>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</parent-name>
+              <remote-alias>Goals per 90 minutes</remote-alias>
+              <ordinal>36</ordinal>
+              <family>top_10_goals_per_90.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier (top_10_goals_per_90.csv)]</local-name>
+              <parent-name>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>37</ordinal>
+              <family>top_10_goals_per_90.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name (top_10_pass_completion_rate.csv)]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>38</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality (top_10_pass_completion_rate.csv)]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>39</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team (top_10_pass_completion_rate.csv)]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>40</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position (top_10_pass_completion_rate.csv)]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>41</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>passes_completed</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[passes_completed]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>passes_completed</remote-alias>
+              <ordinal>42</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>passes_attempted</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[passes_attempted]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>passes_attempted</remote-alias>
+              <ordinal>43</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pass Completion Rate (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Pass Completion Rate (%)]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>Pass Completion Rate (%)</remote-alias>
+              <ordinal>44</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier (top_10_pass_completion_rate.csv)]</local-name>
+              <parent-name>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>45</ordinal>
+              <family>top_10_pass_completion_rate.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>player_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[player_name (top_10_tackles_won.csv)]</local-name>
+              <parent-name>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</parent-name>
+              <remote-alias>player_name</remote-alias>
+              <ordinal>46</ordinal>
+              <family>top_10_tackles_won.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nationality</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[nationality (top_10_tackles_won.csv)]</local-name>
+              <parent-name>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</parent-name>
+              <remote-alias>nationality</remote-alias>
+              <ordinal>47</ordinal>
+              <family>top_10_tackles_won.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>team</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[team (top_10_tackles_won.csv)]</local-name>
+              <parent-name>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</parent-name>
+              <remote-alias>team</remote-alias>
+              <ordinal>48</ordinal>
+              <family>top_10_tackles_won.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>field_position</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[field_position (top_10_tackles_won.csv)]</local-name>
+              <parent-name>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</parent-name>
+              <remote-alias>field_position</remote-alias>
+              <ordinal>49</ordinal>
+              <family>top_10_tackles_won.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tackles Won (%)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Tackles Won (%)]</local-name>
+              <parent-name>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</parent-name>
+              <remote-alias>Tackles Won (%)</remote-alias>
+              <ordinal>50</ordinal>
+              <family>top_10_tackles_won.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country_tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country_tier (top_10_tackles_won.csv)]</local-name>
+              <parent-name>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</parent-name>
+              <remote-alias>Country_tier</remote-alias>
+              <ordinal>51</ordinal>
+              <family>top_10_tackles_won.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='cleaned_key_stats_data.csv' id='cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='cleaned_key_stats_data.csv' table='[cleaned_key_stats_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='id_player' ordinal='0' />
+                  <column datatype='real' name='distance_covered(km/h)' ordinal='1' />
+                  <column datatype='real' name='top_speed' ordinal='2' />
+                  <column datatype='real' name='minutes_played' ordinal='3' />
+                  <column datatype='real' name='appearances' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5' table='[Extract].[cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5]' type='table' />
+            </properties>
+          </object>
+          <object caption='cleaned_players_data.csv' id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='cleaned_players_data.csv' table='[cleaned_players_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='integer' name='id_player' ordinal='0' />
+                  <column datatype='string' name='player_name' ordinal='1' />
+                  <column datatype='string' name='nationality' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='integer' name='age' ordinal='4' />
+                  <column datatype='integer' name='team_id' ordinal='5' />
+                  <column datatype='string' name='Country_tier' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' table='[Extract].[cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_10_assists_per_90.csv' id='top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_assists_per_90.csv' table='[top_10_assists_per_90#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='string' name='nationality' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='real' name='Assists per 90 minutes' ordinal='4' />
+                  <column datatype='string' name='Country_tier' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4' table='[Extract].[top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_10_clean_sheets_per_90.csv' id='top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_clean_sheets_per_90.csv' table='[top_10_clean_sheets_per_90#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='string' name='nationality' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='real' name='Clean Sheets per 90 minutes' ordinal='4' />
+                  <column datatype='string' name='Country_tier' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C' table='[Extract].[top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_10_conversion_rate.csv' id='top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_conversion_rate.csv' table='[top_10_conversion_rate#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='string' name='nationality' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='real' name='goals' ordinal='4' />
+                  <column datatype='real' name='total_attempts' ordinal='5' />
+                  <column datatype='real' name='Conversion Rate (%)' ordinal='6' />
+                  <column datatype='string' name='Country_tier' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15' table='[Extract].[top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_10_goals_per_90.csv' id='top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_goals_per_90.csv' table='[top_10_goals_per_90#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='string' name='nationality' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='real' name='Goals per 90 minutes' ordinal='4' />
+                  <column datatype='string' name='Country_tier' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1' table='[Extract].[top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_10_pass_completion_rate.csv' id='top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_pass_completion_rate.csv' table='[top_10_pass_completion_rate#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='string' name='nationality' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='real' name='passes_completed' ordinal='4' />
+                  <column datatype='real' name='passes_attempted' ordinal='5' />
+                  <column datatype='real' name='Pass Completion Rate (%)' ordinal='6' />
+                  <column datatype='string' name='Country_tier' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2' table='[Extract].[top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_10_tackles_won.csv' id='top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB'>
+            <properties context=''>
+              <relation connection='textscan.1h6vn0k0pdgzf310725yx1dijxk0' name='top_10_tackles_won.csv' table='[top_10_tackles_won#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='player_name' ordinal='0' />
+                  <column datatype='string' name='nationality' ordinal='1' />
+                  <column datatype='string' name='team' ordinal='2' />
+                  <column datatype='string' name='field_position' ordinal='3' />
+                  <column datatype='real' name='Tackles Won (%)' ordinal='4' />
+                  <column datatype='string' name='Country_tier' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB' table='[Extract].[top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[id_player]' />
+              <expression op='[id_player (cleaned_key_stats_data.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='cleaned_key_stats_data.csv_45DAC8243095496A86230FA7EA3B76F5' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[player_name]' />
+              <expression op='[player_name (top_10_assists_per_90.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='top_10_assists_per_90.csv_AC68EA039439453EA045B26EDBA367F4' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[player_name]' />
+              <expression op='[player_name (top_10_clean_sheets_per_90.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='top_10_clean_sheets_per_90.csv_B6D1E09B8D3F490E8CB482696A08748C' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[player_name]' />
+              <expression op='[player_name (top_10_conversion_rate.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='top_10_conversion_rate.csv_D2D41D887EA241D1A2CED70127F8AE15' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[player_name]' />
+              <expression op='[player_name (top_10_goals_per_90.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='top_10_goals_per_90.csv_D38DFED677504C109BE3C2073AA1A7A1' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[player_name]' />
+              <expression op='[player_name (top_10_pass_completion_rate.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='top_10_pass_completion_rate.csv_2959B5950EC14035B49CA69192C536D2' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[player_name]' />
+              <expression op='[player_name (top_10_tackles_won.csv)]' />
+            </expression>
+            <first-end-point object-id='cleaned_players_data.csv_83617135310C4EB5A91FDACBF2A7A799' />
+            <second-end-point object-id='top_10_tackles_won.csv_25E24425753C43DDB2611F8649071FAB' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Asissts Per 90'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Assists/90</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Assists per 90 minutes]' role='measure' type='quantitative' />
+            <column caption='Country tier (top 10 assists per 90.csv)' datatype='string' name='[Country_tier (top_10_assists_per_90.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[Country_tier (top_10_assists_per_90.csv)]' derivation='None' name='[none:Country_tier (top_10_assists_per_90.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[player_name (top_10_assists_per_90.csv)]' derivation='None' name='[none:player_name (top_10_assists_per_90.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Player Name (Top 10 Assists Per 90.Csv)' datatype='string' name='[player_name (top_10_assists_per_90.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Assists per 90 minutes]' derivation='Sum' name='[sum:Assists per 90 minutes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_assists_per_90.csv):nk]' direction='DESC' using='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Assists per 90 minutes:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_assists_per_90.csv):nk]' value='136' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_assists_per_90.csv):nk]' />
+              <text column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Assists per 90 minutes:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_assists_per_90.csv):nk] / [federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_assists_per_90.csv):nk])</rows>
+        <cols>[federated.1ohfms713qkz2e15t67o71970z63].[sum:Assists per 90 minutes:qk]</cols>
+      </table>
+      <simple-id uuid='{BEF63D30-57F2-4855-8373-C07046B26D51}' />
+    </worksheet>
+    <worksheet name='Clean Sheets Per 90'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Clean Sheets/90</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Clean Sheets per 90 minutes]' role='measure' type='quantitative' />
+            <column caption='Country tier (top 10 clean sheets per 90.csv)' datatype='string' name='[Country_tier (top_10_clean_sheets_per_90.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[Country_tier (top_10_clean_sheets_per_90.csv)]' derivation='None' name='[none:Country_tier (top_10_clean_sheets_per_90.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[player_name (top_10_clean_sheets_per_90.csv)]' derivation='None' name='[none:player_name (top_10_clean_sheets_per_90.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Player Name (Top 10 Clean Sheets Per 90.Csv)' datatype='string' name='[player_name (top_10_clean_sheets_per_90.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Clean Sheets per 90 minutes]' derivation='Sum' name='[sum:Clean Sheets per 90 minutes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <alphabetic-sort column='[federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_clean_sheets_per_90.csv):nk]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_clean_sheets_per_90.csv):nk]' />
+              <size column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Clean Sheets per 90 minutes:qk]' />
+              <text column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Clean Sheets per 90 minutes:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='706' />
+                <format attr='maxwidth' value='706' />
+                <format attr='minheight' value='200' />
+                <format attr='maxheight' value='200' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_clean_sheets_per_90.csv):nk] / [federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_clean_sheets_per_90.csv):nk])</rows>
+        <cols>[federated.1ohfms713qkz2e15t67o71970z63].[sum:Clean Sheets per 90 minutes:qk]</cols>
+      </table>
+      <simple-id uuid='{A6204558-49C9-419B-ADF4-413D4CB99665}' />
+    </worksheet>
+    <worksheet name='Goals Per 90'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Goals/90</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column caption='Country tier (top 10 goals per 90.csv)' datatype='string' name='[Country_tier (top_10_goals_per_90.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' default-format='n#,##0.00;-#,##0.00' name='[Goals per 90 minutes]' role='measure' type='quantitative' />
+            <column-instance column='[Country_tier (top_10_goals_per_90.csv)]' derivation='None' name='[none:Country_tier (top_10_goals_per_90.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[player_name (top_10_goals_per_90.csv)]' derivation='None' name='[none:player_name (top_10_goals_per_90.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Player Name (Top 10 Goals Per 90.Csv)' datatype='string' name='[player_name (top_10_goals_per_90.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Goals per 90 minutes]' derivation='Sum' name='[sum:Goals per 90 minutes:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_goals_per_90.csv):nk]' direction='DESC' using='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Goals per 90 minutes:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='190' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_goals_per_90.csv):nk]' value='276' />
+            <format attr='width' field='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_goals_per_90.csv):nk]' value='260' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Goals per 90 minutes:qk]' />
+              <text column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Goals per 90 minutes:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_goals_per_90.csv):nk] / [federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_goals_per_90.csv):nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{E7B9DFFE-9B68-4B21-90B3-4A283B3AAAEA}' />
+    </worksheet>
+    <worksheet name='Minutes Played by Country'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column caption='Minutes Played' datatype='real' name='[minutes_played]' role='measure' type='quantitative' />
+            <column caption='Nationality' datatype='string' name='[nationality]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column-instance column='[nationality]' derivation='None' name='[none:nationality:nk]' pivot='key' type='nominal' />
+            <column-instance column='[minutes_played]' derivation='Sum' name='[sum:minutes_played:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ohfms713qkz2e15t67o71970z63].[Longitude (generated)]' field-type='quantitative' max='3148186.7396668075' min='-966184.07592525287' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ohfms713qkz2e15t67o71970z63].[Latitude (generated)]' field-type='quantitative' max='6704260.8711410761' min='5235898.5496045724' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1ohfms713qkz2e15t67o71970z63].[sum:minutes_played:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:minutes_played:qk]' />
+              <lod column='[federated.1ohfms713qkz2e15t67o71970z63].[none:nationality:nk]' />
+              <geometry column='[federated.1ohfms713qkz2e15t67o71970z63].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ohfms713qkz2e15t67o71970z63].[Latitude (generated)]</rows>
+        <cols>[federated.1ohfms713qkz2e15t67o71970z63].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{124380A2-8AF4-4748-A262-B094F495E7BA}' />
+    </worksheet>
+    <worksheet name='Tackles Won (%)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column caption='Country tier (top 10 tackles won.csv)' datatype='string' name='[Country_tier (top_10_tackles_won.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='real' name='[Tackles Won (%)]' role='measure' type='quantitative' />
+            <column-instance column='[Country_tier (top_10_tackles_won.csv)]' derivation='None' name='[none:Country_tier (top_10_tackles_won.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[player_name (top_10_tackles_won.csv)]' derivation='None' name='[none:player_name (top_10_tackles_won.csv):nk]' pivot='key' type='nominal' />
+            <column caption='Player Name (Top 10 Tackles Won.Csv)' datatype='string' name='[player_name (top_10_tackles_won.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[Tackles Won (%)]' derivation='Sum' name='[sum:Tackles Won (%):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_tackles_won.csv):nk]' direction='DESC' using='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Tackles Won (%):qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Tackles Won (%):qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Tackles Won (%):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_tackles_won.csv):nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.15292817354202271' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Tackles Won (%):qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+          </pane>
+        </panes>
+        <rows>([federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_tackles_won.csv):nk] / [federated.1ohfms713qkz2e15t67o71970z63].[none:player_name (top_10_tackles_won.csv):nk])</rows>
+        <cols>([federated.1ohfms713qkz2e15t67o71970z63].[sum:Tackles Won (%):qk] + [federated.1ohfms713qkz2e15t67o71970z63].[sum:Tackles Won (%):qk])</cols>
+      </table>
+      <simple-id uuid='{3C3C5EFA-845A-410E-A0DF-84EACB02CB47}' />
+    </worksheet>
+    <worksheet name='Total Player Minutes Analysed'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column datatype='string' name='[Country_tier]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Id Player (Cleaned Key Stats Data.Csv)' datatype='integer' name='[id_player (cleaned_key_stats_data.csv)]' role='dimension' type='ordinal' />
+            <column caption='Minutes Played' datatype='real' name='[minutes_played]' role='measure' type='quantitative' />
+            <column-instance column='[Country_tier]' derivation='None' name='[none:Country_tier:nk]' pivot='key' type='nominal' />
+            <column-instance column='[id_player (cleaned_key_stats_data.csv)]' derivation='None' name='[none:id_player (cleaned_key_stats_data.csv):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[minutes_played]' derivation='Sum' name='[sum:minutes_played:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ohfms713qkz2e15t67o71970z63].[none:id_player (cleaned_key_stats_data.csv):ok]'>
+            <groupfilter expression='SUM([minutes_played]) &gt;= 180.' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:id_player (cleaned_key_stats_data.csv):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ohfms713qkz2e15t67o71970z63].[none:id_player (cleaned_key_stats_data.csv):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ohfms713qkz2e15t67o71970z63].[sum:minutes_played:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{8639E69F-84D8-45F8-BE84-BCD7547E0AFD}' />
+    </worksheet>
+    <worksheet name='Total Players Analysed'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_players_data+' name='federated.1ohfms713qkz2e15t67o71970z63' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ohfms713qkz2e15t67o71970z63'>
+            <column datatype='string' name='[Country_tier]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[player_name]' derivation='CountD' name='[ctd:player_name:qk]' pivot='key' type='quantitative' />
+            <column caption='Id Player (Cleaned Key Stats Data.Csv)' datatype='integer' name='[id_player (cleaned_key_stats_data.csv)]' role='dimension' type='ordinal' />
+            <column caption='Minutes Played' datatype='real' name='[minutes_played]' role='measure' type='quantitative' />
+            <column-instance column='[Country_tier]' derivation='None' name='[none:Country_tier:nk]' pivot='key' type='nominal' />
+            <column-instance column='[id_player (cleaned_key_stats_data.csv)]' derivation='None' name='[none:id_player (cleaned_key_stats_data.csv):ok]' pivot='key' type='ordinal' />
+            <column caption='Player Name' datatype='string' name='[player_name]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ohfms713qkz2e15t67o71970z63].[none:id_player (cleaned_key_stats_data.csv):ok]'>
+            <groupfilter expression='SUM([minutes_played]) &gt;= 180.' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:id_player (cleaned_key_stats_data.csv):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ohfms713qkz2e15t67o71970z63].[none:id_player (cleaned_key_stats_data.csv):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ohfms713qkz2e15t67o71970z63].[ctd:player_name:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{5C9A09A4-B55F-4C2D-A5E6-55D4B6AE0E7B}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='1020' minheight='560' minwidth='1020' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97768' id='11' param='horz' type-v2='layout-flow' w='98432' x='784' y='1116'>
+            <zone h='97768' id='9' type-v2='layout-basic' w='82746' x='784' y='1116'>
+              <zone h='48884' id='3' param='vert' type-v2='layout-flow' w='82746' x='784' y='50000'>
+                <zone h='48884' id='5' param='horz' type-v2='layout-flow' w='82746' x='784' y='50000'>
+                  <zone h='48884' id='8' name='Minutes Played by Country' w='82746' x='784' y='50000'>
+                    <layout-cache minheight='244' minwidth='202' type-h='scalable' type-w='scalable' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='48884' id='6' name='Total Player Minutes Analysed' w='41373' x='784' y='1116'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48884' id='7' name='Total Players Analysed' w='41373' x='42157' y='1116'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='97768' id='10' is-fixed='true' param='vert' type-v2='layout-flow' w='15686' x='83530' y='1116'>
+              <zone h='9066' id='12' name='Minutes Played by Country' pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[sum:minutes_played:qk]' type-v2='color' w='15686' x='83530' y='1116'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97768' id='13' param='vert' type-v2='layout-flow' w='98432' x='784' y='1116'>
+                <zone fixed-size='280' h='48884' id='6' is-fixed='true' name='Total Player Minutes Analysed' w='41373' x='784' y='1116'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48884' id='7' is-fixed='true' name='Total Players Analysed' w='41373' x='42157' y='1116'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='48884' id='8' is-fixed='true' name='Minutes Played by Country' w='82746' x='784' y='50000'>
+                  <layout-cache minheight='244' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9066' id='12' name='Minutes Played by Country' pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[sum:minutes_played:qk]' type-v2='color' w='15686' x='83530' y='1116'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D074B000-E018-4644-9C44-6F69C26EA1C8}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 2'>
+      <style />
+      <size maxheight='860' maxwidth='1220' minheight='560' minwidth='1220' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97688' id='7' param='horz' type-v2='layout-flow' w='49344' x='656' y='1156'>
+            <zone h='97688' id='5' type-v2='layout-basic' w='49344' x='656' y='1156'>
+              <zone h='48844' id='3' name='Goals Per 90' w='49344' x='656' y='1156'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='48844' id='13' name='Clean Sheets Per 90' w='49344' x='656' y='50000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='48844' id='9' name='Asissts Per 90' w='49344' x='50000' y='1156'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='48844' id='11' name='Tackles Won (%)' w='49344' x='50000' y='50000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{13E51F50-DE69-4606-91E5-6DE2B7AB634C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Player Minutes Analysed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E43D5601-AD78-49C9-A831-CE7D954D23BE}' />
+    </window>
+    <window class='worksheet' name='Total Players Analysed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D0DE600A-919E-4C38-9611-92E94DEDD7E1}' />
+    </window>
+    <window class='worksheet' name='Minutes Played by Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[sum:minutes_played:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{85808CF3-8C83-44C3-A4A8-30AC8DB4ACE2}' />
+    </window>
+    <window class='worksheet' name='Goals Per 90'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Goals per 90 minutes:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6837F061-8CA3-4B2D-B48B-B282D9F01F9A}' />
+    </window>
+    <window class='worksheet' name='Asissts Per 90'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_assists_per_90.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{03DE0102-A706-401A-8200-C37CFADD698D}' />
+    </window>
+    <window class='worksheet' name='Clean Sheets Per 90'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_clean_sheets_per_90.csv):nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1ohfms713qkz2e15t67o71970z63].[sum:Clean Sheets per 90 minutes:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6D950638-FFDE-4BE3-BD32-65D8FC4674FA}' />
+    </window>
+    <window class='worksheet' name='Tackles Won (%)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1ohfms713qkz2e15t67o71970z63].[none:Country_tier (top_10_tackles_won.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5D61731D-5C98-4D69-9F29-E38FDA0BF299}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Minutes Played by Country'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Player Minutes Analysed' />
+        <viewpoint name='Total Players Analysed' />
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{9B131D15-1C2A-4DCE-A124-F446EC952EA5}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='Asissts Per 90' />
+        <viewpoint name='Clean Sheets Per 90' />
+        <viewpoint name='Goals Per 90' />
+        <viewpoint name='Tackles Won (%)' />
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{31DD79A3-9918-47BF-B19D-C7142E402D1F}' />
+    </window>
+  </windows>
+</workbook>
